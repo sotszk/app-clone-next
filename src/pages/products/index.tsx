@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Product } from "@prisma/client";
-import Layout from "../../layouts/LayoutDefault";
+import Layout from "@/layouts/LayoutDefault";
 
 const getProducts = async () => {
   try {

@@ -1,6 +1,6 @@
 import * as React from "react";
-import Nav from "../components/Nav";
-import Head, { HeadProps } from "../Head";
+import Nav from "@/components/Nav";
+import Head, { HeadProps } from "@/Head";
 
 interface Props extends HeadProps {
   children: React.ReactNode;
