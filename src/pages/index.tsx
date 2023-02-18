@@ -1,9 +1,11 @@
-import Layout from '../layouts/LayoutDefault'
+import Layout from "../layouts/LayoutDefault";
 
-export default () => {
+const Index = () => {
   return (
     <Layout>
       <h1>Hello, world!</h1>
     </Layout>
-  )
-}
+  );
+};
+
+export default Index;

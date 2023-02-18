@@ -1,26 +1,28 @@
-import { useEffect, useState } from 'react'
-import { Product } from '@prisma/client'
-import Layout from '../../layouts/LayoutDefault'
+import { useEffect, useState } from "react";
+import { Product } from "@prisma/client";
+import Layout from "../../layouts/LayoutDefault";
 
 const getProducts = async () => {
   try {
-    const response = await fetch('/api/products');
+    const response = await fetch("/api/products");
     const json = await response.json();
     return json as { data: Product[] };
-  } catch(err) {
+  } catch (err) {
     throw new Error(err);
   }
-}
+};
 
-export default () => {
+const ProductsIndex = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    getProducts().then(({ data }) => {
-      setProducts(data || []);
-    }).catch((err) => {
-      console.log(err);
-    })
+    getProducts()
+      .then(({ data }) => {
+        setProducts(data || []);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return (
@@ -29,7 +31,7 @@ export default () => {
 
       <div>
         <ul>
-          {products.map(product => (
+          {products.map((product) => (
             <li key={product.id}>
               <a href={`/products/${product.id}`}>{product.name}</a>
             </li>
@@ -37,5 +39,7 @@ export default () => {
         </ul>
       </div>
     </Layout>
-  )
-}
+  );
+};
+
+export default ProductsIndex;

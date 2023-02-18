@@ -1,6 +1,6 @@
-import * as React from 'react'
-import Nav from '../components/Nav'
-import Head, { HeadProps } from '../Head'
+import * as React from "react";
+import Nav from "../components/Nav";
+import Head, { HeadProps } from "../Head";
 
 interface Props extends HeadProps {
   children: React.ReactNode;
@@ -11,14 +11,14 @@ const LayoutDefault = ({ children, title, description }: Props) => {
     <>
       <Head {...{ title, description }} />
       <div>
-        <Nav/>
+        <Nav />
         <main>{children}</main>
         <footer>
           <p>copyright 2023</p>
         </footer>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default LayoutDefault;

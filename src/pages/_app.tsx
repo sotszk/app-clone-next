@@ -1,7 +1,7 @@
-import { AppProps } from 'next/app'
+import { AppProps } from "next/app";
 
-import 'modern-css-reset/dist/reset.min.css';
-import '../style/global.css';
+import "modern-css-reset/dist/reset.min.css";
+import "../style/global.css";
 
 // For use of App
 // - persist layouts
@@ -10,10 +10,10 @@ import '../style/global.css';
 // - add global CSS
 
 export default function CustomApp({ Component, pageProps }: AppProps) {
-  console.log('pageProps:', pageProps);
-  return <Component {...pageProps} />
+  console.log("pageProps:", pageProps);
+  return <Component {...pageProps} />;
 }
 
-CustomApp.getInitialProps = async ({ ctx }) => {
-  return { pageProps: { name: 'Hello, world!' } }
-}
+CustomApp.getInitialProps = async () => {
+  return { pageProps: { name: "Hello, world!" } };
+};
