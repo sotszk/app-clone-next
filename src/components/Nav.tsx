@@ -5,7 +5,7 @@ const Nav = () => {
     <nav>
       <ul>
         <li><Link href="/">ホーム</Link></li>
-        <li><Link href="/communities">コミュニティ</Link></li>
+        <li><Link href="/products">製品一覧</Link></li>
       </ul>
     </nav>
   )
