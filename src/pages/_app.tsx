@@ -1,3 +1,4 @@
+import React from "react";
 import { AppProps } from "next/app";
 
 import "modern-css-reset/dist/reset.min.css";
@@ -10,8 +11,8 @@ import "@/style/global.css";
 // - add global CSS
 
 export default function CustomApp({ Component, pageProps }: AppProps) {
-  console.log("pageProps:", pageProps);
-  return <Component {...pageProps} />;
+  const getLayout = (page: React.ReactNode) => page;
+  return getLayout(<Component {...pageProps} />);
 }
 
 CustomApp.getInitialProps = async () => {
