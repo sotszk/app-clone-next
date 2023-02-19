@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Product } from "@prisma/client";
 import Layout from "@/layouts/LayoutDefault";
 import { ApiError } from "@/types/Error";
@@ -34,11 +34,9 @@ const ProductsIndex = () => {
       });
   }, []);
 
-  // useLayout はブラウザの Painting を Block する
+  // useLayoutEffect はブラウザの Painting を Block する
   // @see https://beta.reactjs.org/reference/react/useLayoutEffect#examples
-  useLayoutEffect(() => {
-    // Do something but it will block browser painting
-  }, []);
+  // また、useLayoutEffect は SSR と併用するとクライアントとサーバーのミスマッチを招くため、`ClientOnly` なコンポーネント内でのみの使用が推奨される（コンソールの Warning より）
 
   const isOnline = useIsOnline();
 
