@@ -21,13 +21,13 @@ const reducer: Reducer<State, Action> = (state, action) => {
   switch (action.type) {
     case "change_name": {
       return {
+        ...state,
         name: action.payload.name,
-        age: state.age,
       };
     }
     case "increment_age": {
       return {
-        name: state.name,
+        ...state,
         age: state.age + 1,
       };
     }
