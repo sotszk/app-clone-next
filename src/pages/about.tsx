@@ -1,8 +1,15 @@
+import Layout from "@/layouts/LayoutDefault";
+import TabContainer from "@/components/TabContainer/TabContainer";
+
 const About = () => {
   return (
-    <div>
+    <Layout>
       <h1>About</h1>
-    </div>
+
+      <div>
+        <TabContainer />
+      </div>
+    </Layout>
   );
 };
 
