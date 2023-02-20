@@ -1,0 +1,16 @@
+.the-footer {
+  border-top: 1px solid #000;
+  margin-top: 32px;
+  padding: 4px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .the-footer {
+    border-top-color: #fff;
+  }
+}
+
+.copyright {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+}

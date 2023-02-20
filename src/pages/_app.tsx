@@ -2,7 +2,7 @@ import React from "react";
 import { AppProps } from "next/app";
 
 import "modern-css-reset/dist/reset.min.css";
-import "@/style/global.css";
+import "@/style/base.css";
 
 // For use of App
 // - persist layouts
