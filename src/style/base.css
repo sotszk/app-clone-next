@@ -1,3 +1,15 @@
+:root {
+  --default-color: #000;
+  --default-bg-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --default-color: #ddd;
+    --default-bg-color: #333;
+  }
+}
+
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
@@ -5,8 +17,8 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--default-bg-color);
+    color: var(--default-color);
   }
 
   a {

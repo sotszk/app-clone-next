@@ -1,0 +1,10 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-copy {
+  font-size: 64px;
+  font-weight: 900;
+}
