@@ -68,7 +68,7 @@ const YourProfile = () => {
       <h2>Your Profile</h2>
       <div>
         <div>Name: {state.name}</div>
-        <div>Age: {state.age}</div>
+        <div data-testid="display-age">Age: {state.age}</div>
       </div>
       <div className={styles["form-section"]}>
         <div>
@@ -83,7 +83,9 @@ const YourProfile = () => {
         </div>
         <div>
           Increment age:{" "}
-          <button onClick={handleClickGetOlder}>Let&#39;s get older</button>
+          <button data-testid="increment-age" onClick={handleClickGetOlder}>
+            Let&#39;s get older
+          </button>
         </div>
       </div>
     </div>
