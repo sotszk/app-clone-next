@@ -5,10 +5,13 @@ const Nav = () => {
     <nav>
       <ul>
         <li>
-          <Link href="/">ホーム</Link>
+          <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/products">製品一覧</Link>
+          <Link href="/about">About</Link>
+        </li>
+        <li>
+          <Link href="/products">Products</Link>
         </li>
       </ul>
     </nav>
