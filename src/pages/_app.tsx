@@ -3,6 +3,7 @@ import { AppProps } from "next/app";
 
 import "modern-css-reset/dist/reset.min.css";
 import "@/style/base.css";
+import "@/style/vanilla-global.css";
 
 // For use of App
 // - persist layouts

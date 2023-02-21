@@ -3,6 +3,9 @@ import { Product } from "@prisma/client";
 import Layout from "@/layouts/LayoutDefault";
 import { ApiError } from "@/types/Error";
 import useIsOnline from "@/hooks/useIsOnline";
+import Card from "@/components/Card";
+
+import styles from "./index.css";
 
 const getProducts = async () => {
   try {
@@ -44,12 +47,17 @@ const ProductsIndex = () => {
     <Layout title="製品一覧">
       <h1>Products</h1>
 
-      <div>
+      <div className={styles.content}>
         {products.length > 0 && (
-          <ul>
+          <ul className={styles.cards}>
             {products.map((product) => (
               <li key={product.id}>
-                <a href={`/products/${product.id}`}>{product.name}</a>
+                <Card
+                  id={product.id}
+                  title={product.name}
+                  description={product.description}
+                  url={`/products/${product.id}`}
+                />
               </li>
             ))}
           </ul>
@@ -60,7 +68,9 @@ const ProductsIndex = () => {
           </p>
         )}
       </div>
-      <div>IsOnline?: {isOnline ? "OnLine" : "OffLine"}</div>
+      <div className={styles.onlineStatus}>
+        IsOnline?: {isOnline ? "OnLine" : "OffLine"}
+      </div>
     </Layout>
   );
 };
