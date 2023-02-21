@@ -1,11 +1,13 @@
 :root {
   --default-color: #000;
+  --disabled-color: #999;
   --default-bg-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --default-color: #ddd;
+    --disabled-color: #999;
     --default-bg-color: #333;
   }
 }

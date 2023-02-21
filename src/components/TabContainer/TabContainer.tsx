@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import TabButton from "./TabButton";
 import ProfileTab from "./ProfileTab";
 import WorksTab from "./WorksTab";
@@ -6,11 +6,13 @@ import ContactTab from "./ContactTab";
 
 import type { Tab } from "./types";
 
+import styles from "./TabContainer.module.css";
+
 const TabContainer = () => {
   const [tab, setTab] = useState<Tab>("profile");
   return (
-    <>
-      <div>
+    <Suspense fallback={<div>NOW LOADING...</div>}>
+      <div className={styles["button-group"]}>
         <TabButton
           isActive={tab === "profile"}
           onClick={() => setTab("profile")}
@@ -28,12 +30,12 @@ const TabContainer = () => {
         </TabButton>
       </div>
 
-      <div>
+      <div className={styles.tabpanels}>
         {tab === "profile" && <ProfileTab />}
         {tab === "works" && <WorksTab />}
         {tab === "contact" && <ContactTab />}
       </div>
-    </>
+    </Suspense>
   );
 };
 

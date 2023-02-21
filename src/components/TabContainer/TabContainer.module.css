@@ -1,0 +1,11 @@
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tabpanels {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--default-color);
+}

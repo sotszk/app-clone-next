@@ -1,0 +1,10 @@
+.pending {
+  color: var(--disabled-color);
+}
+
+.tab-button {
+  border: 0;
+  border-radius: 20px;
+  padding: 4px 16px;
+  cursor: pointer;
+}

@@ -1,18 +1,37 @@
-import React from "react";
+import { ReactNode, useTransition } from "react";
+
+import styles from "./TabButton.module.css";
 
 const TabButton = ({
   children,
   isActive,
   onClick,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   isActive: boolean;
   onClick: () => void;
 }) => {
+  const [isPending, startTransition] = useTransition();
+
+  if (isActive) {
+    return <b>{children}</b>;
+  }
+
+  if (isPending) {
+    return <b className={styles.pending}>{children}</b>;
+  }
+
   const handleClick = () => {
-    onClick();
+    startTransition(() => {
+      onClick();
+    });
   };
-  return <button onClick={handleClick}>{children}</button>;
+
+  return (
+    <button className={styles["tab-button"]} onClick={handleClick}>
+      {children}
+    </button>
+  );
 };
 
 export default TabButton;
