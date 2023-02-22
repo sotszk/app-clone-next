@@ -28,16 +28,23 @@ yarn dev
 
 Then, access <http://localhost:3000>
 
-### React + CSS 考察 (WIP)
+## Next.js v13 の App Dir (Experimental) 考察
 
-#### 1. CSS Modules
+- /app でも /src/app でも OK
+- 使いたいが・・・
+  - Server Component 関連のエラーが頻発する
+  - コンポーネントで Vanilla Extract のスタイルを読み込むとエラーが起きるので、とりあえず使用中止。実験的機能だしナ・・・。
+
+## React + CSS 考察 (WIP)
+
+### 1. CSS Modules
 
 - アリ
 - コード補完も [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=clinyong.vscode-css-modules) でばっちり
 - 当然 PostCSS Preset Env を入れて Nesting とか Custom Media とかも入れる
 - SCSS でもいい
 
-#### 2. Vanilla Extract
+### 2. Vanilla Extract
 
 - アリ。ゼロランタイム最高。
 - `nanka-style.css.ts` というファイル接尾辞は少し違和感あり
@@ -65,6 +72,6 @@ export default function Nav() {
 }
 ```
 
-#### 備考
+### 備考
 
 - パフォーマンスを考慮して StyledComponents 系の CSS in JS は避けている（チリツモ案件）
