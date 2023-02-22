@@ -34,6 +34,7 @@ Then, access <http://localhost:3000>
 - 使いたいが・・・
   - Server Component 関連のエラーが頻発する
   - コンポーネントで Vanilla Extract のスタイルを読み込むとエラーが起きるので、とりあえず使用中止。実験的機能だしナ・・・。
+    - 気が向いたら原因調査してみる
 
 ## React + CSS 考察 (WIP)
 
