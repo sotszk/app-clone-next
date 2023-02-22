@@ -1,7 +1,7 @@
 import { style, fallbackVar } from "@vanilla-extract/css";
 import { defaultColorVar } from "@/style/vanilla-base.css";
 
-const content = style({
+export const content = style({
   padding: 16,
   marginTop: 16,
   // vanilla-extract の createVar() で生成したCSS変数がなぜか認識されない
@@ -9,7 +9,7 @@ const content = style({
   border: `3px solid ${fallbackVar(defaultColorVar, "var(--default-color)")}`,
 });
 
-const cards = style({
+export const cards = style({
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
   gap: 16,
@@ -18,10 +18,6 @@ const cards = style({
   margin: 0,
 });
 
-const onlineStatus = style({
+export const onlineStatus = style({
   marginTop: 16,
 });
-
-const styles = { content, onlineStatus, cards };
-
-export default styles;

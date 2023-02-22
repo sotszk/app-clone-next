@@ -1,17 +1,25 @@
 import Link from "next/link";
 
+import * as styles from "./Nav.css";
+
 const Nav = () => {
   return (
-    <nav>
-      <ul>
+    <nav className={styles.nav}>
+      <ul className={styles.navList}>
         <li>
-          <Link href="/">Home</Link>
+          <Link className={styles.navLink} href="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link className={styles.navLink} href="/about">
+            About
+          </Link>
         </li>
         <li>
-          <Link href="/products">Products</Link>
+          <Link className={styles.navLink} href="/products">
+            Products
+          </Link>
         </li>
       </ul>
     </nav>

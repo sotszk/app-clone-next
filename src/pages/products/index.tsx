@@ -5,7 +5,7 @@ import { ApiError } from "@/types/Error";
 import useIsOnline from "@/hooks/useIsOnline";
 import Card from "@/components/Card";
 
-import styles from "./index.css";
+import * as styles from "./index.css";
 
 const getProducts = async () => {
   try {

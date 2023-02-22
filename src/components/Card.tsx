@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import styles from "./Card.css";
+import * as styles from "./Card.css";
 
 const Card = (props: {
   id: number;
