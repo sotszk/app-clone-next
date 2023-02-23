@@ -67,19 +67,26 @@ const YourProfile = () => {
     <div className={styles.wrapper}>
       <h2>Your Profile</h2>
       <div>
-        <div>Name: {state.name}</div>
-        <div data-testid="display-age">Age: {state.age}</div>
+        <div>
+          Name: <b className={styles["big-value"]}>{state.name}</b>
+        </div>
+        <div data-testid="display-age">
+          Age: <b className={styles["big-value"]}>{state.age}</b>
+        </div>
       </div>
       <div className={styles["form-section"]}>
         <div>
           New Name:{" "}
-          <input
-            type="text"
-            value={newName}
-            placeholder="Your new name here"
-            onChange={handleChangeNewName}
-          />
-          <button onClick={handleSubmitNewName}>Submit</button>
+          <div className={styles["name-form-stack"]}>
+            <input
+              className={styles["form-input"]}
+              type="text"
+              value={newName}
+              placeholder="Your new name here"
+              onChange={handleChangeNewName}
+            />
+            <button onClick={handleSubmitNewName}>Submit</button>
+          </div>
         </div>
         <div>
           Increment age:{" "}

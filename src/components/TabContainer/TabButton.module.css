@@ -1,10 +1,19 @@
 .pending {
+  display: inline-block;
+  padding: 4px 16px;
   color: var(--disabled-color);
 }
 
 .tab-button {
   border: 0;
-  border-radius: 20px;
   padding: 4px 16px;
   cursor: pointer;
+  &:hover {
+    background-color: inherit;
+  }
+}
+
+.tab-button-active {
+  display: inline-block;
+  padding: 4px 16px;
 }

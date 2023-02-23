@@ -21,3 +21,7 @@ export const cards = style({
 export const onlineStatus = style({
   marginTop: 16,
 });
+
+export const errorMessage = style({
+  color: "var(--error-color)",
+});

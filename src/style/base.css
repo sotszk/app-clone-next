@@ -1,29 +1,74 @@
+@import "open-props/postcss/style";
+
+/* optional imports that use the props */
+@import "open-props/postcss/normalize";
+@import "open-props/postcss/buttons";
+
 :root {
-  --default-color: #000;
-  --disabled-color: #999;
-  --default-bg-color: #fff;
+  --default-color: var(--gray-11);
+  --disabled-color: var(--gray-6);
+  --default-bg-color: var(--gray-0);
+  --link-color: var(--cyan-6);
+  --link-visited-color: var(--cyan-9);
+  --error-color: var(--red-6);
+
+  --brand: var(--brand);
+  --text-1: var(--text-1);
+  --text-2: var(--text-1);
+  --surface-1: var(--surface-1);
+  --surface-2: var(--surface-2);
+  --surface-3: var(--surface-3);
+  --surface-4: var(--surface-4);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --default-color: #ddd;
-    --disabled-color: #999;
-    --default-bg-color: #333;
+    --default-color: var(--stone-2);
+    --disabled-color: var(--stone-8);
+    --default-bg-color: var(--gray-8);
+    --link-color: var(--cyan-3);
+    --link-visited-color: var(--cyan-8);
+    --error-color: var(--red-6);
+
+    --brand: var(--brand-dark);
+    --text-1: var(--text-1-dark);
+    --text-2: var(--text-1-dark);
+    --surface-1: var(--surface-1-dark);
+    --surface-2: var(--surface-2-dark);
+    --surface-3: var(--surface-3-dark);
+    --surface-4: var(--surface-4-dark);
   }
 }
 
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
+  background-color: var(--default-bg-color);
+  color: var(--default-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--default-bg-color);
-    color: var(--default-color);
+a {
+  color: var(--link-color);
+  &:visited {
+    color: var(--link-visited-color);
   }
+}
 
-  a {
-    color: aquamarine;
+input[type="text"] {
+  border: 1px solid var(--default-color);
+  &::placeholder {
+    color: var(--disabled-color);
+  }
+}
+
+button {
+  background-color: transparent;
+  color: var(--blue-4);
+  text-shadow: none;
+  border: 1px solid var(--blue-4);
+  transition: all 0.2s var(--ease-3);
+  &:hover {
+    background-color: var(--blue-4);
+    color: var(--default-color);
   }
 }

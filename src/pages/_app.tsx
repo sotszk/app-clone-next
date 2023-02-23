@@ -1,7 +1,7 @@
 import React from "react";
 import { AppProps } from "next/app";
 
-import "modern-css-reset/dist/reset.min.css";
+// import "modern-css-reset/dist/reset.min.css";
 import "@/style/base.css";
 import "@/style/vanilla-global.css";
 

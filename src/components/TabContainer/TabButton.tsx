@@ -14,7 +14,7 @@ const TabButton = ({
   const [isPending, startTransition] = useTransition();
 
   if (isActive) {
-    return <b>{children}</b>;
+    return <b className={styles["tab-button-active"]}>{children}</b>;
   }
 
   if (isPending) {

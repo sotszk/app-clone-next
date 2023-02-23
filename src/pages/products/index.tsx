@@ -63,7 +63,7 @@ const ProductsIndex = () => {
           </ul>
         )}
         {error && (
-          <p style={{ color: "red" }}>
+          <p className={styles.errorMessage}>
             ERROR: {error.msg}, ステータス {error.status}
           </p>
         )}
