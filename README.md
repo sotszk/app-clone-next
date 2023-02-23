@@ -76,3 +76,11 @@ export default function Nav() {
 ### 備考
 
 - パフォーマンスを考慮して StyledComponents 系の CSS in JS は避けている（チリツモ案件）
+
+## PostCSS を使う
+
+Next.js はビルトインで PostCSS が使える。ただし、デフォルトの `postcss.config.json` をカスタムする場合、デフォルトの設定が完全に無効になる。つまり上書きすることになる。
+
+デフォルトの設定に入っている `postcss-preset-env` や `postcss-flex-bugs-fixes` のパッケージもインストールし直す必要があるので注意。
+
+[Customizing Plugins | PostCSS | Next.js](https://nextjs.org/docs/advanced-features/customizing-postcss-config#customizing-plugins)
