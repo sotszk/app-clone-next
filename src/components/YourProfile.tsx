@@ -67,7 +67,7 @@ const YourProfile = () => {
     <div className={styles.wrapper}>
       <h2>Your Profile</h2>
       <div>
-        <div>
+        <div data-testid="display-name">
           Name: <b className={styles["big-value"]}>{state.name}</b>
         </div>
         <div data-testid="display-age">
@@ -80,6 +80,7 @@ const YourProfile = () => {
           <div className={styles["name-form-stack"]}>
             <input
               className={styles["form-input"]}
+              data-testid="name-input"
               type="text"
               value={newName}
               placeholder="Your new name here"
