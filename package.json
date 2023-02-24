@@ -20,7 +20,9 @@
     "lint": "eslint . --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
     "prettify": "prettier --write ./src",
-    "test": "vitest"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@testing-library/react": "^14.0.0",
@@ -41,6 +43,7 @@
     "postcss-preset-env": "^8.0.1",
     "prettier": "^2.8.4",
     "prisma": "^4.10.1",
-    "vitest": "^0.28.5"
+    "vitest": "^0.28.5",
+    "husky": "^8.0.0"
   }
 }
