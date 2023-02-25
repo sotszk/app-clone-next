@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import LayoutDefault from "@/layouts/LayoutDefault";
 
 const Xss = () => {
-  const [html, setHtml] = useState("<script>alert('危険');</script>");
+  const [html, setHtml] = useState("");
 
   const handleChange = (evt: React.ChangeEvent<HTMLTextAreaElement>) => {
     setHtml(evt.target.value);
@@ -24,7 +24,7 @@ const Xss = () => {
 
       <div>
         <h2>DANGEROUS PREVIEW</h2>
-        <div dangerouslySetInnerHTML={{ __html: html }}></div>
+        {/* <div dangerouslySetInnerHTML={{ __html: html }}></div> */}
       </div>
     </LayoutDefault>
   );
