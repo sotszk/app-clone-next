@@ -54,8 +54,9 @@ a {
   }
 }
 
-input[type="text"] {
+:where(input[type="text"], textarea) {
   border: 1px solid var(--default-color);
+  cursor: default;
   &::placeholder {
     color: var(--disabled-color);
   }
