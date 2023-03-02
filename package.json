@@ -6,14 +6,6 @@
   "prisma": {
     "seed": "node prisma/seed.js"
   },
-  "dependencies": {
-    "@prisma/client": "^4.10.1",
-    "modern-css-reset": "^1.4.0",
-    "next": "^13.1.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^4.9.5"
-  },
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -45,5 +37,13 @@
     "prisma": "^4.10.1",
     "vitest": "^0.28.5",
     "husky": "^8.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.10.1",
+    "modern-css-reset": "^1.4.0",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.5"
   }
 }
